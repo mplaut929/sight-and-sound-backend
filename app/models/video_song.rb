@@ -1,0 +1,2 @@
+class VideoSong < ApplicationRecord
+end
