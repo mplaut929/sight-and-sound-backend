@@ -6,7 +6,7 @@ class UserSongsController < ApplicationController
 
   def create
     @user_song = UserSong.find_or_create_by(user_id: params[:user_id], song_id: params[:song_id])
-    render json: @user_song
+    render json: @user_song.user.songs
   end
 
 

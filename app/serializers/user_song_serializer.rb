@@ -1,3 +1,4 @@
 class UserSongSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :user_id, :song_id
+
 end
