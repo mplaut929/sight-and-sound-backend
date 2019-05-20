@@ -8,7 +8,7 @@ class AuthController < ApplicationController
 
       render json: {user: UserSerializer.new(user), token: token}
     else
-      render json: {errors: "You dun goofed!"}
+      render json: {errors: "Must be Logged in"}
     end
   end
 
@@ -16,7 +16,7 @@ class AuthController < ApplicationController
     if curr_user
       render json: curr_user
     else
-      render json: {errors: "You dun goofed!"}
+      render json: {errors: "Must be Logged in"}
     end
   end
 end
