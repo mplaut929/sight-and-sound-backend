@@ -8,7 +8,7 @@ class AuthController < ApplicationController
 
       render json: {user: UserSerializer.new(user), token: token}
     else
-      render json: {errors: "Must be Logged in"}
+      render json: {errors: "Incorrect Username and/or Password"}
     end
   end
 
@@ -16,7 +16,7 @@ class AuthController < ApplicationController
     if curr_user
       render json: curr_user
     else
-      render json: {errors: "Must be Logged in"}
+      render json: {errors: "Must Be Logged In"}
     end
   end
 end
