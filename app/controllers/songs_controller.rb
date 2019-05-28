@@ -10,5 +10,11 @@ class SongsController < ApplicationController
     render json: @song
   end
 
+  def recommended
+    @song = Song.find(params[:id])
+    @recommended_songs = Song.recommended_song(@song)
+    render json: @recommended_songs
+  end
+
 
 end
